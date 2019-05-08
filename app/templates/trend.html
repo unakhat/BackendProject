@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<section class="" id="search" style="margin-top:60px">
+  <div class="container">
+    <div class="row">
+      <p> </p>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <h2 class="text-uppercase">Trend by the searching ZIP Code</h2>
+        <hr class="star-light mb-5">
+        <p>The popular keyword list:</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Zipcode</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody id="trendTable">
+            <tr>
+              <td>{{data[0][0]}}</td>
+              <td>{{data[0][1]}}</td>
+            </tr>
+            <tr>
+              <td>{{data[1][0]}}</td>
+              <td>{{data[1][1]}}</td>
+            </tr>
+            <tr>
+              <td>{{data[2][0]}}</td>
+              <td>{{data[2][1]}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-1"></div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+{% endblock %}

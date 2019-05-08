@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>Welcome to Spatial Force</title>
+  {% endif %}
+
+  {% block head %}{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    {% block navbar %}{% endblock %}
+    <nav class="navbar navbar-light bg-info navbar-expand-lg fixed-top" id="mainNav">
+      <a href="/" class="navbar-brand text-white">Spatial Force</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="navbar-item">
+            <a href="search" class="nav-link text-light">Search</a>
+          </li>
+          <li class="navbar-item">
+            <a href="rank" class="nav-link text-light">Rank</a>
+          </li>
+          <li class="navbar-item">
+            <a href="trend" class="nav-link text-light">Trend</a>
+          </li>
+          <li class="navbar-item">
+            <a href="google_zip" class="nav-link text-light">Google Zipcode</a>
+          </li>
+          <li class="navbar-item">
+            <a href="about" class="nav-link text-light">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer clase="footer">
+    <div class="continer text-center bg-light text-white fixed-bottom">
+      <p></p>
+      <a href="/" class="text-muted">&copy; Spatial Force App</a>
+      <p></p>
+    </div>
+  </footer>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+  {% block script %} {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+{% block content %}
+<section class="" id="search" style="margin-top:60px">
+  <div class="container">
+    <div class="row">
+      <p> </p>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <h2 class="text-uppercase">Search by ZIP Code</h2>
+        <hr class="star-light mb-5">
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+    <form class="form-group row" autocomplete="off">
+      <div class="col-1"></div>
+      <div class="col-8">
+        <input class="form-control" id="zipInput" type="search" placeholder="Type ZIP Code here..." aria-label="Search" pattern="[0-9]{5}" title="Five digits" maxlength="5">
+      </div>
+      <button class="col-2 btn btn-outline-info" id="zipBtn" type="submit">Search</button>
+      <div class="col-1"></div>
+    </form>
+
+    <div class="row">
+      <p> </p>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <div class="card-deck">
+          <div class="card" style="">
+            <div class="card-body">
+              <h5 class="card-title">House Value</h5>
+              <br><br>
+              <h2 class="card-text text-right text-info" id="cardValue-house"> {{houseValue}}</h2>
+            </div>
+          </div>
+          <div class="card" style="">
+            <div class="card-body">
+              <h5 class="card-title">Income</h5>
+              <br><br>
+              <h2 class="card-text text-right text-info" id="cardValue-income">{{incomeValue}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <p> </p>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-5">
+        <div class="card" style="">
+          <div class="card-body">
+            <h5 class="card-title">Population</h5>
+            <br><br>
+            <h2 class="card-text text-right text-info" id="cardValue-pop">{{populationValue}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="card" style="">
+          <div class="card-body">
+            <h5 class="card-title">Education</h5>
+            <br><br>
+            <h2 class="card-text text-right text-info" id="cardValue-edu">{{educationValue}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="../static/js/search.js"></script>
+{% endblock %}
