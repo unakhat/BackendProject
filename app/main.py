@@ -42,9 +42,9 @@ def google_default():
 def google():
 
     zipCode = str(request.form['zipCode'])
-    data = requests.get(f'https://maps.googleapis.com/maps/api/geocode/json?address={zipCode}&key=AIzaSyD5GiLT_Ny1Lrbad3IrMujyaTWaqMbllr4').content
+    data = requests.get(f'https://maps.googleapis.com/maps/api/geocode/json?address={zipCode}&key=AIzaSyD5GiLT_Ny1Lrbad3IrMujyaTWaqMbllr4').json()
 
-    print(data)
+    print(json.dumps(data, indent=2))
 
     return "Success"
 
